@@ -4,7 +4,10 @@ import characterService from '../service/CharacterService';
 import PokemonModal from './PokemonModal';
 
 const CharactersPokemonsCards = ({ name, url }) => {
-  const [image, setImage] = useState([]);
+  const [image, setImage] = useState('');
+  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState('');
+  const [baseExperience, setBaseExperience] = useState('');
   useEffect(() => {
       getPokemonById();
   }, []);
@@ -12,6 +15,9 @@ const CharactersPokemonsCards = ({ name, url }) => {
       const response = await characterService.getPokemonById(url)
           .catch((e) => console.log(e));
           setImage(response.sprites.front_default);
+          setWeight(response.weight);
+          setHeight(response.height);
+          setBaseExperience(response.base_experience);
   }
 
   return (
@@ -24,7 +30,7 @@ const CharactersPokemonsCards = ({ name, url }) => {
           <div className="card-text">
             
           </div>
-          <PokemonModal name={name} url={url} />
+          <PokemonModal name={name} weight={weight} height={height} baseExperience={baseExperience} />
         </div>
       </div>
 

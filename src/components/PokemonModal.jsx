@@ -1,24 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import ListGroup from 'react-bootstrap/ListGroup';
-import characterService from '../service/CharacterService';
 
-function PokemonModal({ name, url }) {
-    // weight, height, baseExperience
-    const [show, setShow] = useState(false);
-    const [pokeInfo, setPokeInfo] = useState([]);
-    useEffect(() => {
-        getPokemonById();
-    }, []);
-    const getPokemonById = async () => {
-        const response = await characterService.getPokemonById(url)
-            .catch((e) => console.log(e));
-        setPokeInfo(response);
-    }
-    console.log('URL: ' + url);
-    console.log('DATA: ' + pokeInfo);
+function PokemonModal({ name, weight, height, baseExperience }) {
 
-
+     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -34,9 +20,9 @@ function PokemonModal({ name, url }) {
                 </Modal.Header>
                 <Modal.Body>
                     <ListGroup>
-                        <ListGroup.Item><strong>Weight:</strong> {pokeInfo.weight}</ListGroup.Item>
-                        <ListGroup.Item><strong>Height:</strong> {pokeInfo.height}</ListGroup.Item>
-                        <ListGroup.Item><strong>Base Experience:</strong> {pokeInfo.base_experience}</ListGroup.Item>
+                        <ListGroup.Item><strong>Weight:</strong> {weight}</ListGroup.Item>
+                        <ListGroup.Item><strong>Height:</strong> {height}</ListGroup.Item>
+                        <ListGroup.Item><strong>Base Experience:</strong> {baseExperience}</ListGroup.Item>
                     </ListGroup>
                 </Modal.Body>
                 <Modal.Footer>
