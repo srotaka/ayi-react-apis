@@ -1,0 +1,82 @@
+body{
+  background-color: black;
+  color:#58f11d;
+}
+.nav-logo {
+  padding-right: 55px;
+}
+
+.nav-link {
+  color: #58f11d;
+  font-size: 22px;
+}
+
+.nav :hover {
+  color: #48a822;
+}
+
+.nav :focus {
+  color: #96e477;
+  font-size: 22px;
+}
+.btn-green {
+  background-color: #58f11d;
+  color: #ffff;
+  border-radius: 5px;  
+  text-decoration: none;
+}
+
+.py-3 {
+  text-align: center;
+  border-color: #58f11d !important;
+}
+
+.card-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.myCard{
+  border-radius: 10px;    
+  margin: 30px;
+  box-shadow: 5px 10px 8px #424242;
+  width: 280px;  
+  padding: 15px;
+  transition: all .2s ease-in-out;
+  background-color: rgb(43, 39, 39);
+}
+
+.card-title{
+  padding: 15px 0;
+  text-align: center;
+}
+.specs li{
+  padding-left: 10px;
+}
+.specs li::marker{
+  content: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.753 5.99999L10.273 8.29399C9.877 8.68399 9.877 9.31699 10.273 9.70799C10.668 10.098 11.31 10.098 11.705 9.70799L15.555 6.06099C15.843 5.77799 16 5.40299 16 4.99999C16 4.59999 15.842 4.22199 15.556 3.93999L11.706 0.292988C11.31 -0.0970117 10.668 -0.0970117 10.272 0.292988C9.877 0.682988 9.877 1.31599 10.272 1.70699L12.752 3.99999H1C0.447 3.99999 0 4.44599 0 4.99999C0 5.54999 0.448 5.99999 1 5.99999H12.753Z' fill='%237B61FF'/%3E%3C/svg%3E%0A");   
+}
+
+.pageTitle{
+  font-size: 48px;
+  text-align: center;
+  color:#58f11d;
+  text-align: center;
+  background-color: black;  
+  padding-bottom: 20px;
+}
+
+.landing{
+  background-image: url(../images/wallpaper4.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size:contain;
+  height: 850px;
+  background-color: black;
+  margin-top: 20px;
+}
+
+
